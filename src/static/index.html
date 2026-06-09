@@ -8,8 +8,12 @@
   </head>
   <body>
     <header>
+      <button id="user-menu-button" class="user-menu-button" aria-label="Teacher account">
+        User
+      </button>
       <h1>Mergington High School</h1>
       <h2>Extracurricular Activities</h2>
+      <p id="auth-status" class="auth-status">Viewing as Student</p>
     </header>
 
     <main>
@@ -40,6 +44,28 @@
         <div id="message" class="hidden"></div>
       </section>
     </main>
+
+    <div id="login-modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="login-title">
+      <div class="modal-content">
+        <button id="close-login-modal" class="modal-close" aria-label="Close login dialog">
+          ×
+        </button>
+        <h3 id="login-title">Teacher Login</h3>
+        <form id="login-form">
+          <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" id="username" required />
+          </div>
+          <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" required />
+          </div>
+          <button type="submit">Log In</button>
+        </form>
+        <button id="logout-button" class="secondary-btn hidden" type="button">Log Out</button>
+        <div id="auth-message" class="hidden"></div>
+      </div>
+    </div>
 
     <footer>
       <p>&copy; 2026 Mergington High School</p>
