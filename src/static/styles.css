@@ -16,6 +16,7 @@ body {
 }
 
 header {
+  position: relative;
   text-align: center;
   padding: 20px 0;
   margin-bottom: 30px;
@@ -26,6 +27,27 @@ header {
 
 header h1 {
   margin-bottom: 10px;
+}
+
+.user-menu-button {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: white;
+  font-size: 14px;
+  padding: 6px 12px;
+}
+
+.user-menu-button:hover {
+  background-color: rgba(255, 255, 255, 0.35);
+}
+
+.auth-status {
+  margin-top: 10px;
+  font-size: 14px;
+  opacity: 0.95;
 }
 
 main {
@@ -125,6 +147,10 @@ section h3 {
   background-color: #ffebee;
 }
 
+.delete-btn.hidden {
+  display: none;
+}
+
 .participants-section p {
   color: #777;
   font-style: italic;
@@ -164,6 +190,15 @@ button:hover {
   background-color: #3949ab;
 }
 
+.secondary-btn {
+  margin-top: 10px;
+  background-color: #455a64;
+}
+
+.secondary-btn:hover {
+  background-color: #546e7a;
+}
+
 .message {
   margin-top: 20px;
   padding: 10px;
@@ -190,6 +225,46 @@ button:hover {
 
 .hidden {
   display: none;
+}
+
+.teacher-only-disabled {
+  opacity: 0.65;
+  pointer-events: none;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.45);
+  z-index: 10;
+}
+
+.modal-content {
+  width: min(92vw, 420px);
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 18px;
+  position: relative;
+}
+
+.modal-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  border: none;
+  background: none;
+  color: #333;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+#auth-message {
+  margin-top: 12px;
+  padding: 10px;
+  border-radius: 4px;
 }
 
 footer {
